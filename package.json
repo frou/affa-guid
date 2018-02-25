@@ -1,0 +1,27 @@
+{
+  "name": "affa-guid",
+  "version": "1.0.0",
+  "description": "Generate UUIDs that are affa guid for use as identifiers in most programming languages.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha src/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frou/affa-guid.git"
+  },
+  "author": "Duncan Holm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frou/affa-guid/issues"
+  },
+  "homepage": "https://github.com/frou/affa-guid#readme",
+  "dependencies": {
+    "random-int": "^1.0.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1"
+  }
+}
