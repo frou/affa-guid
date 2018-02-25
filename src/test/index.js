@@ -8,6 +8,7 @@ describe('affa guid', function () {
   var generated = {}
 
   before(function () {
+    expect(N).to.be.at.least(2)
     for (var i = 0; i < N; i++) {
       generated[affaGuid()] = true
     }
