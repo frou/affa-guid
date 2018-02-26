@@ -1,6 +1,4 @@
-var chai = require('chai')
-var expect = chai.expect
-
+var assert = require('assert')
 var affaGuid = require('..')
 
 describe('affa guid', function () {
@@ -8,7 +6,7 @@ describe('affa guid', function () {
   var generated = {}
 
   before(function () {
-    expect(N).to.be.at.least(2)
+    assert(N >= 2, 'Tests need multiple UUIDs to be generated')
     for (var i = 0; i < N; i++) {
       generated[affaGuid()] = true
     }
@@ -16,12 +14,11 @@ describe('affa guid', function () {
 
   it('Generates UUIDs that are all lowercase, start with a letter, and have no dashes', function () {
     for (var uuid in generated) {
-      // eslint-disable-next-line no-unused-expressions
-      expect(/^[a-f][a-f0-9]{31}$/.test(uuid)).to.be.true
+      assert(/^[a-f][a-f0-9]{31}$/.test(uuid), uuid)
     }
   })
 
   it('Generates UUIDs that are unique each time', function () {
-    expect(Object.keys(generated).length).to.equal(N)
+    assert.strictEqual(Object.keys(generated).length, N)
   })
 })
