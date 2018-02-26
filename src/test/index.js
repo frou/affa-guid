@@ -3,10 +3,14 @@ var affaGuid = require('..')
 
 describe('affa guid', function () {
   var N = 1000
-  var generated = {}
+  var generated
 
   before(function () {
     assert(N >= 2, 'Tests need multiple UUIDs to be generated')
+  })
+
+  beforeEach(function () {
+    generated = {}
     for (var i = 0; i < N; i++) {
       generated[affaGuid()] = true
     }
