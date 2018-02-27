@@ -3,11 +3,12 @@ var affaGuid = require('..')
 
 describe('affa guid', function () {
   var N = 1000
-  var generated
 
   before(function () {
     assert(N >= 2, 'Tests need multiple UUIDs to be generated')
   })
+
+  var generated
 
   beforeEach(function () {
     generated = {}
@@ -23,6 +24,6 @@ describe('affa guid', function () {
   })
 
   it('Generates UUIDs that are unique each time', function () {
-    assert.strictEqual(Object.keys(generated).length, N)
+    assert(Object.keys(generated).length === N)
   })
 })
