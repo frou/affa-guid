@@ -1,6 +1,6 @@
 {
   "name": "affa-guid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate UUIDs that are affa guid for use as identifiers in most programming languages.",
   "main": "src/index.js",
   "scripts": {
