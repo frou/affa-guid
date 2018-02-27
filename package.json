@@ -4,7 +4,7 @@
   "description": "Generate UUIDs that are affa guid for use as identifiers in most programming languages.",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/test"
+    "test": "mocha --ui bdd --reporter min --colors src/test"
   },
   "repository": {
     "type": "git",
