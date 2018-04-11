@@ -1,7 +1,7 @@
 var uuid = require('uuid/v4')
 var randomInt = require('random-int')
 
-module.exports = function () {
+function affaGuid () {
   var conventional = uuid()
   var dedashed = conventional.replace(/-/g, '')
   var ASCIIa = 97
@@ -9,3 +9,5 @@ module.exports = function () {
   var letterPrefix = String.fromCharCode(randomInt(ASCIIa, ASCIIf))
   return letterPrefix + dedashed.slice(1)
 }
+
+module.exports = affaGuid
