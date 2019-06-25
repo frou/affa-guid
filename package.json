@@ -18,9 +18,9 @@
   "homepage": "https://github.com/frou/affa-guid#readme",
   "dependencies": {
     "random-int": "^1.0.0",
-    "uuid": "^3.2.1"
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "mocha": "^5.0.1"
+    "mocha": "^5.2.0"
   }
 }
